@@ -55,4 +55,12 @@ export class CalculadoraComponent {
     return a / b;
   }
 
+  limparCampos(campo: 'A' | 'B') {
+  if (campo === 'A') {
+    this.valorA = null;
+  } else {
+    this.valorB = null;
+  }
+  this.resultado = null;
+  }
 }

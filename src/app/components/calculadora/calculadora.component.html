@@ -1,8 +1,18 @@
 <div class="calculadora">
     <h1 class="title">Calculadora</h1>
     <div class="body">
-        <input placeholder="Valor A" type="number" [(ngModel)]="valorA">
-        <input placeholder="Valor B" type="number" [(ngModel)]="valorB">
+        <input 
+        placeholder="Valor A" 
+        type="number" 
+        [(ngModel)]="valorA"
+        (focus)="limparCampos('A')"
+        >
+        <input 
+        placeholder="Valor B" 
+        type="number" 
+        [(ngModel)]="valorB"
+        (focus)="limparCampos('B')"
+        >
         <select id="dropdown" [(ngModel)]="selecionado">
             <option *ngFor="let opcao of opcoes" [value]="opcao">
                 {{ opcao }}
