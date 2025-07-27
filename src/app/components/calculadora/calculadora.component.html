@@ -4,23 +4,23 @@
         <input 
         placeholder="Valor A" 
         type="number" 
-        [(ngModel)]="valorA"
-        (focus)="limparCampos('A')"
+        [(ngModel)]="novaCalculadora.valorA"
+        (focus)="novaCalculadora.limparCampos('A')"
         >
         <input 
         placeholder="Valor B" 
         type="number" 
-        [(ngModel)]="valorB"
-        (focus)="limparCampos('B')"
+        [(ngModel)]="novaCalculadora.valorB"
+        (focus)="novaCalculadora.limparCampos('B')"
         >
-        <select id="dropdown" [(ngModel)]="selecionado">
+        <select id="dropdown" [(ngModel)]="novaCalculadora.operacao">
             <option *ngFor="let opcao of opcoes" [value]="opcao">
                 {{ opcao }}
             </option>
         </select> 
-        <button (click)="fazerCalculo()">Calcular</button>
+        <button (click)="novaCalculadora.fazerCalculo()">Calcular</button>
         <label>Resultado:
-            <input [(ngModel)]="resultado" readonly>
+            <input [(ngModel)]="novaCalculadora.resultado" readonly>
         </label>
     </div>
 </div>
